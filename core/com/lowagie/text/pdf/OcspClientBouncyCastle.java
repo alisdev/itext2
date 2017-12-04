@@ -49,7 +49,6 @@
 
 package com.lowagie.text.pdf;
 
-import com.lowagie.text.ExceptionConverter;
 import java.io.BufferedOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -61,6 +60,7 @@ import java.net.URL;
 import java.security.Security;
 import java.security.cert.X509Certificate;
 import java.util.Vector;
+
 import org.bouncycastle.asn1.DEROctetString;
 import org.bouncycastle.asn1.ocsp.OCSPObjectIdentifiers;
 import org.bouncycastle.asn1.x509.X509Extension;
@@ -73,6 +73,8 @@ import org.bouncycastle.ocsp.OCSPReq;
 import org.bouncycastle.ocsp.OCSPReqGenerator;
 import org.bouncycastle.ocsp.OCSPResp;
 import org.bouncycastle.ocsp.SingleResp;
+
+import com.lowagie.text.ExceptionConverter;
 
 /**
  * OcspClient implementation using BouncyCastle.
