@@ -5,9 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cz.alis.forked</groupId>
 	<artifactId>itext</artifactId>
-	<packaging>jar</packaging>
-	<name>iText, a Free Java-PDF library</name>
-	<version>2.1.7.1</version>
+	<packaging>bundle</packaging>
+	<name>Based on iText 2.7.1, a Free Java-PDF library</name>
+	<version>1.0</version>
 	<description>iText, a free Java-PDF library</description>
 	<url>http://www.lowagie.com/iText/</url>
 	
@@ -117,6 +117,19 @@
 					</archive>
 				</configuration>
 			</plugin>
+            
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>com.lowagie;version="${pom.version}"</Export-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
+    
+    
 </project>
